@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action= "{{url_for('editMenu', menu_id=item.id)}}" method = 'POST'>
+        <label for='name'>몇개를 파시겠습니까?:</label>
+        <input id='name' type = 'int' name = 'menu_name', placeholder='{{number}}'>
+        <input type='submit', value='Sell'>
+    </form>
+<a href= '{{url_for('showMenu')}}'>Cancel</a>
+</body>
+</html>
