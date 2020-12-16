@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action= "{{url_for('signMenu', sign_id=item.id)}}" method = 'POST'>
+        <label for='cname'>책의 제목은?:</label>
+        <input id='cname' type = 'text' name = 'book_cname', placeholder='{{database}}'>
+        <br>
+        <label for='description'>책의 상태는?:</label>
+        <input id='description' type = 'text' name = 'book_description', placeholder='{{A}}'>
+        <br>
+        <label for='price'>책의 가격은?:</label>
+        <input id='price' type = 'int' name = 'book_price', placeholder='{{10000}}'>
+        <br>
+        <label for='sell_id'>당신의 학번은?:</label>
+        <input id='sell_id' type = 'int' name = 'book_sell_id', placeholder='{{201601776}}'>
+        <br>
+        <input type='submit', value='Sign'>
+    </form>
+<a href= '{{url_for('showMenu')}}'>Cancel</a>
+</body>
+</html>

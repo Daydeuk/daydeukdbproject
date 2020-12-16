@@ -1,0 +1,17 @@
+<!doctype HTML>
+<html>
+    <body>
+        <h1>BOOK LIST</h1>
+        <h4>책제목 상태 가격  판매자_학번  예약</h4>
+        {% for item in items %}
+        {{ item.cname }} 
+        {{ item.description}}
+        {{ item.price}}
+        {{ item.sell_id}}  
+        {{ item.countt}}
+        <a href={{url_for('signMenu', sign_id=item.id)}}>판매등록</a>
+        <a href={{url_for('buyMenu', buy_id=item.id)}}>구매</a>
+        <br><br>
+        {% endfor %}
+    </body>
+</html>
